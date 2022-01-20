@@ -62,7 +62,7 @@ class modeler(nn.Module):
             ''' Cluster representation learning. '''
             self.H[i], self.Z[i] = self.clayer[i](u_1, self.Z[i], sparse)
             ''' Cluster-aware graph summary generation & Pooling. '''
-            s = torch.unsqueeze(torch.spmm(torch.squeeze(self.H[i], 0), torch.squeeze(self.Z[i], 0)), 0)
+            s = self.act(torch.unsqueeze(torch.spmm(torch.squeeze(self.H[i], 0), torch.squeeze(self.Z[i], 0)), 0))
             ''' Discriminator learning. '''
             logit = self.disc(s, u_1, u_2, samp_bias1, samp_bias2)
 

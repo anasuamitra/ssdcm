@@ -22,7 +22,7 @@ class ssdcm(embedder):
     def writetofile_fn(self, results):
         ''' Script to dump algorithm performance in results/ folder '''
         columns = ["Algorithm", "Dataset", "incl_attr", "cons", "reg_coef", "sup_coef", "c_assign_coef",
-                   "n_cross_nw_coef", "l2_coef", "lr", "n_layers", "nheads", "pool_type", "isSemi", "isAttn", "clusters"]
+                   "n_cross_nw_coef", "l2_coef", "lr", "n_layers", "nheads", "isSemi", "isAttn", "clusters"]
         result_keys = ["micro_f1", "macro_f1", "nmi", "nmi_h", "S@5", "S@10", "S@20", "S@50", "S@100"]
         for i in result_keys:
             columns += [i]
@@ -43,7 +43,6 @@ class ssdcm(embedder):
         temp["lr"] = self.args.lr
         temp["n_layers"] = self.args.n_layers
         temp["nheads"] = self.args.nheads
-        temp["pool_type"] = self.args.pool_type
         temp["isSemi"] = self.args.isSemi
         temp["isAttn"] = self.args.isAttn
         temp["clusters"] = self.args.clusters

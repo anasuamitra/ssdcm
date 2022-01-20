@@ -1,5 +1,5 @@
-# SSDCM - Semi-Supervised Deep Clustered Multiplex
-This is the code necessary to run experiments on SSDCM framework described in the KDD'21 paper [Semi-Supervised Deep Learning for Multiplex Networks](https://dl.acm.org/doi/abs/10.1145/3447548.3467443), [arXiv](https://arxiv.org/pdf/2110.02038.pdf).
+# SSDCM - Semi-Supervised Deep Learning for Multiplex Networks
+This is the code necessary to run experiments on SSDCM framework described in the KDD'21 paper [Semi-Supervised Deep Learning for Multiplex Networks](https://dl.acm.org/doi/abs/10.1145/3447548.3467443).
 
 ## Architecture
 <p align="center">
